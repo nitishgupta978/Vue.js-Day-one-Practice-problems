@@ -1,21 +1,9 @@
 <template>
-  <div id="app">
-  <ul>
-  <li v-for="value in myObject">
-    {{ value }}
-  </li>
-  <li v-for="(value, key) in myObject">
-  {{ key }}: {{ value }}
-</li>
-</ul>
-<br>
-<br>
-<h2>Index</h2>
-<li v-for="(value, key, index) in myObject">
-  {{ index }}. {{ key }}: {{ value }}
-</li>
- 
-</div>
+ <p>Using text interpolation: {{ rawHtml }}</p>
+<p>Using v-html directive: <span v-html="rawHtml"></span></p>
+<h3>
+<span style="color: red">This should be red.</span>
+</h3>
 </template>
 
 
@@ -24,13 +12,11 @@ export default {
    name: 'HelloWorld',
    
   data() {
-    return {
-    myObject: {
-      title: 'How to do lists in Vue',
-      author: 'Jane Doe',
-      publishedAt: '2016-04-10'
-    }
+  return {
+   rawHtml:' red'
   }
-}
+},
 }
 </script>
+
+
