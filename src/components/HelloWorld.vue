@@ -1,19 +1,10 @@
 <template>
 <center>
  <div id="app">
-  <input v-model="checkedNames" type="checkbox" id="john" value="John"/>
-  <label for="john"> John</label>
-  
-  <input v-model="checkedNames" type="checkbox" id="paul" value="Paul"/>
-  <label for="paul"> Paul</label>
-  
-  <input v-model="checkedNames" type="checkbox" id="george" value="George"/>
-  <label for="george"> George</label>
-  
-  <input v-model="checkedNames" type="checkbox" id="ringo" value="Ringo"/>
-  <label for="ringo"> Ringo</label>
+  <h3>What is your favorite kind of taco?</h3>
+  <textarea v-model="tacos"></textarea>
   <br>
-  <span> <h4>Checked names: {{ checkedNames }}</h4></span>
+  <button v-show="tacos" type="submit">Let us know!</button>
 </div>
 </center>
 </template>
@@ -25,9 +16,9 @@ export default {
    
   data() {
     return {
-      checkedNames: ['Hi John now you  select !!']
-}
+        tacos: ''
   }
+}
 }
 </script>
 
