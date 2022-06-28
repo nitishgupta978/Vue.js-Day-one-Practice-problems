@@ -1,7 +1,7 @@
 <template>
- <div id="app">
-  {{ message }} Nice to meet Vue.
-</div>
+<center>
+ <h1 v-if="awesome">Vue is awesome!</h1>
+ </center>
 </template>
 
 <script>
@@ -10,7 +10,7 @@ export default {
    
   data() {
    return {
-        message: 'Hello world!'
+       awesome: true
     }
   }
 }
