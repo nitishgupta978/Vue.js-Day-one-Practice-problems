@@ -1,10 +1,19 @@
 <template>
 <center>
  <div id="app">
-  <h3>Type here:</h3>
-  <textarea v-model.lazy="message" class="message" rows="6" maxlength="100" />
+  <input v-model="checkedNames" type="checkbox" id="john" value="John"/>
+  <label for="john"> John</label>
+  
+  <input v-model="checkedNames" type="checkbox" id="paul" value="Paul"/>
+  <label for="paul"> Paul</label>
+  
+  <input v-model="checkedNames" type="checkbox" id="george" value="George"/>
+  <label for="george"> George</label>
+  
+  <input v-model="checkedNames" type="checkbox" id="ringo" value="Ringo"/>
+  <label for="ringo"> Ringo</label>
   <br>
-  <p class="booktext">{{ message }} </p>
+  <span> <h4>Checked names: {{ checkedNames }}</h4></span>
 </div>
 </center>
 </template>
@@ -16,7 +25,7 @@ export default {
    
   data() {
     return {
-      message: 'Hi John now you can type here only your numbers!!'
+      checkedNames: ['Hi John now you  select !!']
 }
   }
 }
