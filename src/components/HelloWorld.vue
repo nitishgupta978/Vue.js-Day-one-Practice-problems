@@ -16,7 +16,7 @@ export default {
   data() {
    return {
        parentMessage: 'Parent',
-       items: [{ message: 'Foo' }, { message: 'Bar' }]
+       items: [{ message: 'Foo' }, { message: 'Bar' },{ message: 'Honey' },{ message: 'Party' }]
     }
   }
 }
