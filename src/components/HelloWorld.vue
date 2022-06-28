@@ -8,6 +8,12 @@
   {{ key }}: {{ value }}
 </li>
 </ul>
+<br>
+<br>
+<h2>Index</h2>
+<li v-for="(value, key, index) in myObject">
+  {{ index }}. {{ key }}: {{ value }}
+</li>
  
 </div>
 </template>
