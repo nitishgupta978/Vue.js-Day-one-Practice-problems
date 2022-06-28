@@ -1,13 +1,10 @@
 <template>
   <div id="app">
-  <li v-for="{ message } in items">
-  {{ message }}
-</li>
-
-<!-- with index alias -->
-<li v-for="({ message }, index) in items">
-  {{ message }} {{ index }}
-</li>
+  <ul>
+  <li v-for="value in myObject">
+    {{ value }}
+  </li>
+</ul>
  
 </div>
 </template>
@@ -18,10 +15,13 @@ export default {
    name: 'HelloWorld',
    
   data() {
-   return {
-       parentMessage: 'Parent',
-       items: [{ message: 'Foo' }, { message: 'Bar' },{ message: 'Honey' },{ message: 'Party' }]
+    return {
+    myObject: {
+      title: 'How to do lists in Vue',
+      author: 'Jane Doe',
+      publishedAt: '2016-04-10'
     }
   }
+}
 }
 </script>
