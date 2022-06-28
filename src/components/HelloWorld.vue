@@ -1,8 +1,12 @@
 <template>
   <div id="app">
-  
-    <li v-for="(item, index) in items" :key="items">
-  {{ parentMessage }} - {{ index }} - {{ item.message }}
+  <li v-for="{ message } in items">
+  {{ message }}
+</li>
+
+<!-- with index alias -->
+<li v-for="({ message }, index) in items">
+  {{ message }} {{ index }}
 </li>
  
 </div>
