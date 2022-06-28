@@ -4,6 +4,9 @@
   <li v-for="value in myObject">
     {{ value }}
   </li>
+  <li v-for="(value, key) in myObject">
+  {{ key }}: {{ value }}
+</li>
 </ul>
  
 </div>
