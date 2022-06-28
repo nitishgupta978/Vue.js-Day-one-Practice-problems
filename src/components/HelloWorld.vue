@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-  <ul>
-    <li v-for="item in items" :key="item">
-      {{ item }}
-    </li>
-  </ul>
+  
+    <li v-for="(item, index) in items" :key="items">
+  {{ parentMessage }} - {{ index }} - {{ item.message }}
+</li>
+ 
 </div>
 </template>
 
@@ -15,11 +15,8 @@ export default {
    
   data() {
    return {
-    
-       items: [
-       'you find me','good',
-       'nice to meet you'
-       ]
+       parentMessage: 'Parent',
+       items: [{ message: 'Foo' }, { message: 'Bar' }]
     }
   }
 }
