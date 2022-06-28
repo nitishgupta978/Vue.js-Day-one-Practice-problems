@@ -1,10 +1,13 @@
 <template>
-<center>
-  <button @click="awesome = !awesome">Toggle</button>
- <h1 v-if="awesome">Vue is awesome!</h1>
- <h1 v-else>oh no 😢</h1>
- </center>
+  <div id="app">
+  <ul>
+    <li v-for="item in items" :key="item">
+      {{ item }}
+    </li>
+  </ul>
+</div>
 </template>
+
 
 <script>
 export default {
@@ -12,7 +15,11 @@ export default {
    
   data() {
    return {
-       awesome: true
+    
+       items: [
+       'you find me','good',
+       'nice to meet you'
+       ]
     }
   }
 }
