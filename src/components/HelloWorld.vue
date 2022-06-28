@@ -1,9 +1,8 @@
 <template>
- <p>Using text interpolation: {{ rawHtml }}</p>
-<p>Using v-html directive: <span v-html="rawHtml"></span></p>
-<h3>
-<span style="color: red">This should be red.</span>
-</h3>
+<center>
+<input v-model="searchText"   width="200" height="100"/>
+
+</center>
 </template>
 
 
@@ -13,7 +12,7 @@ export default {
    
   data() {
   return {
-   rawHtml:' red'
+   searchText:' '
   }
 },
 }
